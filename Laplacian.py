@@ -2,13 +2,14 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-cap = cv2.VideoCapture(r'C:\Users\chris.nelson\Desktop\Vid Captures\Quad\PuppialPursuit.mp4')
+cap = cv2.VideoCapture(0)
 
 # Define the codec and create VideoWriter object
 #fourcc = cv2.VideoWriter_fourcc(*'DIVX')
 fourcc = cv2.cv.CV_FOURCC(*'DIVX')
 out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
 i=0
+print cap.isOpened()
 while(cap.isOpened()):
     ret, frame = cap.read()
     if ret==True:
@@ -31,5 +32,5 @@ while(cap.isOpened()):
 print 'done'
 # Release everything if job is finished
 cap.release()
-out.release()
+#out.release()
 cv2.destroyAllWindows()

@@ -46,6 +46,7 @@ if __name__ == '__main__':
     capL.set(3, 480)
     capR.set(4, 640)
     capR.set(3, 480)
+    print capL.get(3)
     while(capR.isOpened() & capL.isOpened()):
         retL, frameL = capL.read()
         retR, frameR = capR.read()

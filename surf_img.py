@@ -1,6 +1,8 @@
+import sys
+print sys.path
 import cv2
 from matplotlib import pyplot as plt
-
+print cv2.__version__
 img = cv2.imread('Denali-flipped.jpeg')
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # Create SURF object. You can specify params here or later.

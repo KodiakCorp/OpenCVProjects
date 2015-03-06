@@ -58,5 +58,5 @@ while(cap.isOpened()):
 print 'done'
 # Release everything if job is finished
 cap.release()
-out.release()
+#out.release()
 cv2.destroyAllWindows()
